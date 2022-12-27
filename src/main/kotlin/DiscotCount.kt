@@ -8,9 +8,8 @@ class DiscotCount {
             if (Purchase_Amount > 1000 && Purchase_Amount <= 10000) discont = 100
             if (Purchase_Amount > 10000) discont = (Purchase_Amount * 5) / 100
             var dicontBuyer = 0
-            if (isOftenBuyer == true) dicontBuyer = (Purchase_Amount - discont) * 1 / 100
-            var totalDiscont = discont + dicontBuyer
-            return totalDiscont
+            if (isOftenBuyer) dicontBuyer = (Purchase_Amount - discont) * 1 / 100
+            return discont + dicontBuyer
 
         }
     }
